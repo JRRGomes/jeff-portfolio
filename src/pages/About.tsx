@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import jeffImage from '/jeff.jpg'
 
 const About = () => {
   const skills = [
@@ -48,7 +49,7 @@ const About = () => {
           viewport={{ once: true }}
         >
           <img
-            src="/jeff.jpg"
+            src={jeffImage}
             alt="Jeff - Fullstack Developer"
             className="w-32 h-32 rounded-full object-cover border-4 border-accent shadow-lg"
           />
