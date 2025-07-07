@@ -60,8 +60,9 @@ const Blog = () => {
           {categories.map((category) => (
             <button
               key={category.id}
+              aria-label={`Filter by ${category.name}`}
               onClick={() => setSelectedCategory(category.id)}
-              className={`px-4 py-2 rounded-full text-sm transition-colors border border-accent ${selectedCategory === category.id
+              className={`cursor-pointer px-4 py-2 rounded-full text-sm transition-colors border border-accent ${selectedCategory === category.id
                 ? 'bg-accent/20 text-primary font-bold'
                 : 'bg-background text-secondary hover:bg-accent/20 hover:text-accent'
                 }`}
