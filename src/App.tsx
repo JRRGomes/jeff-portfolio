@@ -10,7 +10,7 @@ import BlogPost from './pages/BlogPost'
 function App() {
 
   return (
-    <Router>
+    <Router basename='/jeff-portfolio'>
       <Navigation />
       <main>
         <Routes>
