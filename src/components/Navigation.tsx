@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import ThemeToggle from './ThemeToggle'
 
 const Navigation = () => {
@@ -17,17 +18,17 @@ const Navigation = () => {
       <div className="max-w-6xl mx-auto px-6 py-4">
         <div className="flex justify-between items-center">
           <div className="font-bold text-xl">
-            <a key="home" href="/" className="gradient-text">JRRG</a>
+            <Link to="/" className="gradient-text">JRRG</Link>
           </div>
           <div className="hidden md:flex space-x-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.href}
-                href={item.href}
+                to={item.href}
                 className="nav-link text-primary hover:text-accent"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
             <ThemeToggle />
           </div>
@@ -55,14 +56,14 @@ const Navigation = () => {
           <div className="md:hidden mt-4 py-4 border-t border-primary">
             <div className="flex flex-col space-y-4">
               {navItems.map((item) => (
-                <a
+                <Link
                   key={item.href}
-                  href={item.href}
+                  to={item.href}
                   className="text-primary hover:text-accent transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
-                </a>
+                </Link>
               ))}
               <ThemeToggle />
             </div>
