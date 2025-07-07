@@ -108,7 +108,7 @@ const Contact = () => {
               Send Email
             </motion.a>
             <motion.a
-              href="/Jefferson_Gomes_Resume.pdf"
+              href="./Jefferson_Gomes_Resume.pdf"
               download
               className="border border-accent text-accent px-8 py-4 rounded-lg font-medium hover:bg-accent hover:text-white transition-colors flex items-center justify-center"
               whileHover={{ scale: 1.05 }}
