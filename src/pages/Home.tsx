@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import BlogTicker from '../components/BlogTicker'
 
 const Home = () => {
@@ -84,18 +85,18 @@ const Home = () => {
           transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1], delay: 0.4 }}
         >
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="/about"
+            <Link
+              to="/about"
               className="bg-accent text-white px-8 py-3 rounded-lg font-medium hover:bg-secondary transition-colors"
             >
               Learn More
-            </a>
-            <a
-              href="/contact"
+            </Link>
+            <Link
+              to="/contact"
               className="border border-accent text-accent px-8 py-3 rounded-lg font-medium hover:bg-secondary hover:text-white transition-colors"
             >
               Get In Touch
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>
